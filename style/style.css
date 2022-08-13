@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Roboto:ital@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+header{
+  grid-area: header;
+}
+
+img{
+  height: 20rem;
+  width: 20rem;
+  display: grid;
+  margin: 0 auto;
+}
+
+ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+p{
+  text-align: center;
+  font-size: 1rem;
+  font-weight:bold;
+}
+
+nav{
+  background-color: steelblue;
+  padding: 1rem;
+}
+
+h1{
+  text-align: center;
+}
+
+footer{
+  padding-top: 1rem;
+  background-color: steelblue;
+  grid-area: footer;
+}
+
+a{
+  text-decoration: none;
+  color: bisque;
+  font-size: 1rem;
+}
+
+.home{
+  grid-area: main;
+}
+
+.mainInterno{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.redes{
+  display: flex;
+  justify-content: center;
+}
+
+.icon{
+  height: 10rem;
+  width: 10rem;
+}
+
+
+.grilla{
+  display: grid;
+  grid-template-areas: 
+  "header  header "
+  "main    main  "
+  "footer  footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0fr 1fr 0fr 1fr;
+  gap: 3rem;
+}
+
+
+label{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+textarea,input{
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+article{
+  display: flex;
+  justify-content: center;
+}
+
+.separar{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.contactoMain{
+  grid-area: contactoMain;
+}
+
+.footerContacto{
+  grid-area: footerContacto;
+}
+
+.contactoHeader{
+  grid-area: contactoHeader;
+}
+
+.grillaContacto{
+display: grid;
+grid-template-areas:
+"contactoHeader contactoHeader  "
+"contactoMain contactoMain "
+"footerContacto footerContacto ";
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+
+}
+
+
+.homeNosotros{
+  grid-area: homeNosotros;
+}
+
+.footerNosotros{
+  grid-area: footerNosotros;
+}
+
+.headerNosotros{
+  grid-area: headerNosotros;
+}
+
+.imgNosotros{
+  padding-bottom: 2rem;
+}
+
+.homeNosotrosInterno{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.grillaNosotros{
+  display: grid;
+  grid-template-areas: 
+  "headerNosotros headerNosotros"
+  "homeNosotros homeNosotros "
+  "footerNosotros footerNosotros";
+}
+
+.productosHeader{
+  grid-area: productosHeader;
+}
+
+.homeProductos{
+  grid-area: homeProductos ;
+}
+
+.mainInternoP{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.productosFooter{
+  grid-area: productosFooter;
+}
+
+.grillaProductos{
+  display: grid;
+  grid-template-areas: 
+  "productosHeader productosHeader"
+  "homeProductos homeProductos"
+  "productosFooter productosFooter";
+  grid-template-columns: 1fr 1fr ;
+  gap: 2rem;
+} 
+
+
+/* mobile */
+@media(min-width:700px){
+
+  .grilla{
+    margin: 0;
+    grid-template-areas: 
+    "header  header header "
+    "main    main main   "
+    "footer  footer footer ";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .mainInterno{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  p{
+    text-align: center;
+    font-size: 13px;
+  }
+
+  a{
+    font-size: 15px;
+  }
+  
+  nav{
+    padding: 2rem;
+  }
+
+
+  .grillaContacto{
+    display: grid;
+    grid-template-areas:
+    "contactoHeader contactoHeader contactoHeader "
+    "contactoMain contactoMain contactoMain"
+    "footerContacto footerContacto footerContacto ";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    }
+
+    .grillaNosotros{
+      display: grid;
+      grid-template-areas: 
+      "headerNosotros headerNosotros headerNosotros"
+      "homeNosotros homeNosotros homeNosotros "
+      "footerNosotros footerNosotros footerNosotros";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .areaNosotros{
+      width: 400px;
+      height: 50px;
+      font-size: 15px;
+    }
+
+    .grillaProductos{
+      display: grid;
+      grid-template-areas: 
+      "productosHeader productosHeader productosHeader"
+      "homeProductos homeProductos homeProductos"
+      "productosFooter productosFooter productosFooter";
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+    
+    .mainInternoP{
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+}
+
+@media(max-width:400px){
+
+  .grilla{
+    margin: 0;
+    grid-template-areas: 
+    "header"
+    "main "
+    "footer";
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .mainInterno{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr ;
+    gap: 2rem;
+  }
+
+  p{
+    text-align: center;
+    font-size: 15px;
+  }
+
+  a{
+    font-size: 10px;
+  }
+
+  .redes{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon{
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .grillaContacto{
+    display: grid;
+    grid-template-areas:
+    "contactoHeader"
+    "contactoMain"
+    "footerContacto";
+    grid-template-columns: 1fr ;
+    gap: 2rem;
+    }
+
+    .grillaNosotros{
+      display: grid;
+      grid-template-areas: 
+      "headerNosotros"
+      "homeNosotros"
+      "footerNosotros";
+      grid-template-columns: 1fr;
+    }
+
+    .areaNosotros{
+      width: 300px;
+      height: 50px;
+      font-size: 15px;
+    }
+
+    .grillaProductos{
+      display: grid;
+      grid-template-areas: 
+      "productosHeader "
+      "homeProductos "
+      "productosFooter ";
+      grid-template-columns:   1fr ;
+    }
+    
+    .mainInternoP{
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+}
+
+@media(min-width:1200px){
+  .grilla{
+    margin: 0;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main "
+    "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .mainInterno{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 1rem;
+  }
+
+  p{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .redes{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon{
+    height: 10rem;
+    width: 10rem;
+  }
+
+  img{
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .grillaContacto{
+    display: grid;
+    grid-template-areas:
+    "contactoHeader contactoHeader contactoHeader contactoHeader"
+    "contactoMain contactoMain contactoMain contactoMain"
+    "footerContacto footerContacto footerContacto footerContacto";
+    grid-template-columns: 1fr  1fr  1fr  1fr ;
+    gap: 3rem;
+    }
+
+    .grillaNosotros{
+      display: grid;
+      grid-template-areas: 
+      "headerNosotros headerNosotros headerNosotros headerNosotros"
+      "homeNosotros homeNosotros homeNosotros homeNosotros"
+      "footerNosotros footerNosotros footerNosotros footerNosotros";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .areaNosotros{
+      width: 800px;
+      height: 50px;
+      font-size: 2rem;
+    }
+
+    .grillaProductos{
+      display: grid;
+      grid-template-areas: 
+      "productosHeader productosHeader productosHeader productosHeader"
+      "homeProductos homeProductos homeProductos homeProductos"
+      "productosFooter productosFooter productosFooter productosFooter";
+    }
+    
+    .mainInternoP{
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+
+}
