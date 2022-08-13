@@ -34,6 +34,8 @@ p{
 }
 
 nav{
+  width: 100%;
+  position:fixed;
   background-color: steelblue;
   padding: 1rem;
 }
@@ -43,7 +45,9 @@ h1{
 }
 
 footer{
-  padding-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: steelblue;
   grid-area: footer;
 }
@@ -54,6 +58,13 @@ a{
   font-size: 1rem;
 }
 
+a:hover{
+  border-radius: 10%;
+  background-color:tan;
+  color: black;
+  padding: 1rem;
+}
+
 .home{
   grid-area: main;
 }
@@ -62,6 +73,7 @@ a{
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
+  padding-top: 7rem;
 }
 
 
@@ -92,12 +104,14 @@ label{
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  padding: 1rem 0;
 }
 
 textarea,input{
   width: 100%;
-  height: 2rem;
-  font-size: 1rem;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 article{
@@ -111,6 +125,7 @@ article{
 }
 
 .contactoMain{
+  padding-top: 10rem;
   grid-area: contactoMain;
 }
 
@@ -132,7 +147,6 @@ grid-template-columns: 1fr 1fr;
 gap: 3rem;
 
 }
-
 
 .homeNosotros{
   grid-area: homeNosotros;
@@ -170,10 +184,12 @@ gap: 3rem;
 }
 
 .homeProductos{
+  padding-top: 10rem;
   grid-area: homeProductos ;
 }
 
 .mainInternoP{
+  margin-top: 1rem;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
@@ -192,6 +208,11 @@ gap: 3rem;
   grid-template-columns: 1fr 1fr ;
   gap: 2rem;
 } 
+
+.categorias{
+  padding: 10rem;
+}
+
 
 
 /* mobile */
@@ -221,6 +242,7 @@ gap: 3rem;
   a{
     font-size: 15px;
   }
+
   
   nav{
     padding: 2rem;
@@ -297,6 +319,7 @@ gap: 3rem;
   a{
     font-size: 10px;
   }
+
 
   .redes{
     display: flex;
@@ -388,6 +411,7 @@ gap: 3rem;
     height: 25rem;
     width: 25rem;
   }
+
 
   .grillaContacto{
     display: grid;
